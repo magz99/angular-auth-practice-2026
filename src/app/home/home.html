@@ -1,0 +1,8 @@
+@if(userInfo$ | async; as user) {
+<div class="home-container">
+  <h1>I am logged in!</h1>
+  <h2>User Profile</h2>
+  <pre>{{ user | json }}</pre>
+  <button (click)="auth.logout({ logoutParams: { returnTo: window.location.origin } })">Logout</button>
+</div>
+}
